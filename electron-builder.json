@@ -18,23 +18,26 @@
     "!{.eslintrc.js,.eslintrc.yaml,.eslintrc.yml,.eslintrc.json}"
   ],
   "win": {
-    "icon": "src/img/ic.png",
+    "icon": "src/img/icon.ico",
     "target": [
       {
-        "target": "msi",
+        "target": "nsis",
         "arch": ["x64"]
       }
     ]
   },
-  "msi": {
+  "nsis": {
     "oneClick": false,
-    "perMachine": true,
+    "allowToChangeInstallationDirectory": true,
     "createDesktopShortcut": true,
     "createStartMenuShortcut": true,
     "shortcutName": "8 Ball Pool Guide Line",
     "menuCategory": "Games",
     "runAfterFinish": true,
-    "upgradeCode": "324b0d3c-0a5d-40e5-accd-a366acf6ecdf"
+    "installerIcon": "src/img/icon.ico",
+    "uninstallerIcon": "src/img/icon.ico",
+    "installerHeaderIcon": "src/img/icon.ico",
+    "deleteAppDataOnUninstall": true
   },
   "npmRebuild": false,
   "buildDependenciesFromSource": true,
