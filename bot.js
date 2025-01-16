@@ -1,5 +1,4 @@
-const {BrowserWindow, app, screen, globalShortcut, ipcMain} = require("electron");
-const fetch = require("node-fetch");
+const {BrowserWindow, app, screen, globalShortcut, ipcMain, net} = require("electron");
 const path = require("path");
 
 BOT = {
@@ -57,14 +56,24 @@ ipcMain.on("synchronous-message", (event, arg) => {
 });
 
 ipcMain.on('launch-client', (event, arg) => {
-   fetch('https://idbots.pro/api/v1/client', {
+   const request = net.request({
+      method: 'GET',
+      url: 'https://idbots.pro/api/v1/client',
       headers: {
          'Authorization': 'Bearer ' + arg.session
       }
-   })
-       .then(res => res.text())
-       .then(html =>  event.sender.send('client-launched', html));
+   });
 
+   let responseData = '';
+   request.on('response', (response) => {
+      response.on('data', (chunk) => {
+         responseData += chunk;
+      });
+      response.on('end', () => {
+         event.sender.send('client-launched', responseData);
+      });
+   });
+   request.end();
 });
 
 ipcMain.on('quit-window', (event, arg) => {

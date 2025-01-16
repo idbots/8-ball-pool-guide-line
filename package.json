@@ -20,6 +20,7 @@
     "package": "electron-forge package",
     "make": "electron-forge make"
   },
+ 
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Felipefury/8-Ball-Pool-Hack-Guide-Line.git"
@@ -27,8 +28,15 @@
   "author": "GM 111 (Not SamzSakerz)",
   "license": "ISC",
   "dependencies": {
-    "fs": "0.0.1-security",
-    "node-fetch": "^2.7.0"
+    "@electron-forge/maker-base": "^7.6.0",
+    "@electron-forge/maker-wix": "^7.6.0",
+    "@electron-forge/maker-zip": "^7.6.0",
+    "@electron-forge/shared-types": "^7.6.0",
+    "@electron-forge/tracer": "^7.6.0",
+    "child_process": "^1.0.2",
+    "chrome-trace-event": "^1.0.4",
+    "electron-squirrel-startup": "^1.0.1",
+    "fs": "0.0.1-security"
   },
   "bugs": {
     "url": "https://github.com/Felipefury/8-Ball-Pool-Hack-Guide-Line/issues"
@@ -36,13 +44,18 @@
   "homepage": "https://github.com/Felipefury/8-Ball-Pool-Hack-Guide-Line#readme",
   "packageManager": "pnpm@9.15.3+sha512.1f79bc245a66eb0b07c5d4d83131240774642caaa86ef7d0434ab47c0d16f66b04e21e0c086eb61e62c77efc4d7f7ec071afad3796af64892fae66509173893a",
   "devDependencies": {
-    "@electron-forge/maker-dmg": "^7.6.0",
-    "electron-squirrel-startup": "^1.0.1",
     "@electron-forge/cli": "^7.6.0",
+    "@electron-forge/maker-appx": "^7.6.0",
+    "@electron-forge/maker-dmg": "^7.6.0",
+    "@electron-forge/maker-squirrel": "^7.6.0",
     "@electron-forge/maker-wix": "^7.6.0",
     "@electron-forge/plugin-auto-unpack-natives": "^7.6.0",
     "@electron-forge/plugin-fuses": "^7.6.0",
+    "@electron/asar": "^3.2.18",
     "@electron/fuses": "^1.8.0",
-    "electron": "^16.0.5"
+    "@electron/packager": "^18.3.6",
+    "electron": "^16.0.5",
+    "electron-squirrel-startup": "^1.0.1",
+    "node-fetch": "^2.7.0"
   }
 }

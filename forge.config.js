@@ -5,6 +5,12 @@ const path = require('path');
 module.exports = {
   packagerConfig: {
     asar: true,
+    extraResource: [
+      'node_modules/node-fetch',
+      'node_modules/whatwg-url',
+      'node_modules/tr46',
+      'node_modules/webidl-conversions'
+    ],
     icon: path.join(__dirname, 'src', 'img', 'icon'),  // Don't include extension - Forge handles platform-specific icons
     appBundleId: 'com.felipegm.8ballpoolguideline',
     appCategoryType: 'public.app-category.games',
@@ -26,14 +32,15 @@ module.exports = {
     {
       name: '@electron-forge/maker-wix',
       config: {
+        icon: path.join(__dirname, 'src', 'img', 'icon.ico'),
         language: 1033,
         manufacturer: 'GM 111',
-        name: '8-ball-pool-guide-line',
-        exe: '8-ball-pool-guide-line',
+        name: '@idbots-8-ball-pool-guide-line',
+        exe: '@idbots-8-ball-pool-guide-line',
         appUserModelId: 'com.idbots.8ballpoolguideline',
         shortName: '8BallPool',
         description: 'Advanced 8 Ball Pool Assistant with Dynamic Aiming Guidelines and Real-time Shot Prediction',
-        version: '5.0.1',
+        version: '7.0.0',
         upgradeCode: '324b0d3c-0a5d-40e5-accd-a366acf6ecdf',
         shortcutFolderName: '8 Ball Pool Guide Line',
         programFilesFolderName: '8BallPoolGuideLine',
