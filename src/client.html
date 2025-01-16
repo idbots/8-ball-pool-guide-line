@@ -1,0 +1,6 @@
+<script>
+    const { ipcRenderer } = require('electron');
+    ipcRenderer.once('load-client', (event, arg) => {
+        document.write(arg);
+    });
+</script>

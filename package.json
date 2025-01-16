@@ -1,0 +1,48 @@
+{
+  "name": "@idbots/8-ball-pool-guide-line",
+  "version": "7.0.0",
+  "description": "🎱 Advanced 8 Ball Pool Assistant | 🎯 Dynamic Aiming Guidelines | 🎮 Enhanced Gaming Experience | 🔥 Real-time Shot Prediction",
+  "keywords": [
+    "8-ball-pool",
+    "pool-game",
+    "billiards",
+    "game-assistant",
+    "aim-helper",
+    "shot-prediction",
+    "gaming-tools",
+    "pool-guidelines",
+    "billiards-assistant",
+    "game-enhancement"
+  ],
+  "main": "bot.js",
+  "scripts": {
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Felipefury/8-Ball-Pool-Hack-Guide-Line.git"
+  },
+  "author": "GM 111 (Not SamzSakerz)",
+  "license": "ISC",
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "node-fetch": "^2.7.0"
+  },
+  "bugs": {
+    "url": "https://github.com/Felipefury/8-Ball-Pool-Hack-Guide-Line/issues"
+  },
+  "homepage": "https://github.com/Felipefury/8-Ball-Pool-Hack-Guide-Line#readme",
+  "packageManager": "pnpm@9.15.3+sha512.1f79bc245a66eb0b07c5d4d83131240774642caaa86ef7d0434ab47c0d16f66b04e21e0c086eb61e62c77efc4d7f7ec071afad3796af64892fae66509173893a",
+  "devDependencies": {
+    "@electron-forge/maker-dmg": "^7.6.0",
+    "electron-squirrel-startup": "^1.0.1",
+    "@electron-forge/cli": "^7.6.0",
+    "@electron-forge/maker-wix": "^7.6.0",
+    "@electron-forge/plugin-auto-unpack-natives": "^7.6.0",
+    "@electron-forge/plugin-fuses": "^7.6.0",
+    "@electron/fuses": "^1.8.0",
+    "electron": "^16.0.5"
+  }
+}
