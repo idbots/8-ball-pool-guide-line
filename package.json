@@ -18,7 +18,10 @@
   "scripts": {
     "start": "electron .",
     "build": "electron-builder build --win",
-    "dist": "electron-builder"
+    "dist": "electron-builder",
+    "forge:start": "electron-forge start",
+    "forge:package": "electron-forge package",
+    "forge:make": "electron-forge make"
   },
   "repository": {
     "type": "git",
@@ -38,6 +41,13 @@
   "homepage": "https://github.com/Felipefury/8-Ball-Pool-Hack-Guide-Line#readme",
   "packageManager": "pnpm@9.15.3+sha512.1f79bc245a66eb0b07c5d4d83131240774642caaa86ef7d0434ab47c0d16f66b04e21e0c086eb61e62c77efc4d7f7ec071afad3796af64892fae66509173893a",
   "devDependencies": {
+    "@electron-forge/cli": "^7.6.0",
+    "@electron-forge/maker-dmg": "^7.6.0",
+    "@electron-forge/maker-wix": "^7.6.0",
+    "@electron-forge/maker-zip": "^7.6.0",
+    "@electron-forge/plugin-auto-unpack-natives": "^7.6.0",
+    "@electron-forge/plugin-fuses": "^7.6.0",
+    "@electron/fuses": "^1.8.0",
     "electron": "^16.0.5",
     "electron-builder": "^24.13.3",
     "electron-squirrel-startup": "^1.0.1",
