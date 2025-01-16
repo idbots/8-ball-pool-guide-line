@@ -1,0 +1,42 @@
+{
+  "appId": "com.idbots.8ballpoolguideline",
+  "productName": "8 Ball Pool Guide Line",
+  "directories": {
+    "output": "dist",
+    "buildResources": "build"
+  },
+  "files": [
+    "**/*",
+    "!**/node_modules/*/{CHANGELOG.md,README.md,README,readme.md,readme}",
+    "!**/node_modules/*/{test,__tests__,tests,powered-test,example,examples}",
+    "!**/node_modules/*.d.ts",
+    "!**/node_modules/.bin",
+    "!**/*.{iml,o,hprof,orig,pyc,pyo,rbc,swp,csproj,sln,xproj}",
+    "!.editorconfig",
+    "!**/._*",
+    "!**/{.DS_Store,.git,.hg,.svn,CVS,RCS,SCCS,__pycache__,thumbs.db,.gitignore,.gitattributes}",
+    "!{.eslintrc.js,.eslintrc.yaml,.eslintrc.yml,.eslintrc.json}"
+  ],
+  "win": {
+    "icon": "src/img/ic.png",
+    "target": [
+      {
+        "target": "msi",
+        "arch": ["x64"]
+      }
+    ]
+  },
+  "msi": {
+    "oneClick": false,
+    "perMachine": true,
+    "createDesktopShortcut": true,
+    "createStartMenuShortcut": true,
+    "shortcutName": "8 Ball Pool Guide Line",
+    "menuCategory": "Games",
+    "runAfterFinish": true,
+    "upgradeCode": "324b0d3c-0a5d-40e5-accd-a366acf6ecdf"
+  },
+  "npmRebuild": false,
+  "buildDependenciesFromSource": true,
+  "nodeGypRebuild": false
+} 
